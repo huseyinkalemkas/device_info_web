@@ -61,16 +61,14 @@ class DeviceInfoPage extends StatefulWidget {
 
 class _DeviceInfoPageState extends State<DeviceInfoPage> {
   final DeviceInfoWeb _plugin = DeviceInfoWeb();
-  final TextEditingController _filterController = TextEditingController(
-    text: 'BYD BLE3',
-  );
+  final TextEditingController _filterController = TextEditingController();
   StreamSubscription<BleNotification>? _notifications;
 
   BrowserDeviceInfo? _browser;
   bool? _bluetoothAvailable;
   BleDevice? _device;
   List<BleDevice> _found = const [];
-  String _filter = 'BYD BLE3';
+  String _filter = '';
   GattDeviceInfo? _gatt;
   String? _error;
   var _busy = false;
